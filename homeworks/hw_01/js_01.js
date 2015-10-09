@@ -54,7 +54,10 @@ function repeat(str, count, sep) {
 function compare(a, b) {
     if (Object.keys(a).length == Object.keys(b).length) {
         for (var key in a) {
-            if (a[key] != b[key])return false;
+             if (typeof(a[key]) == "object" && typeof(b[key]) == "object"&&!compare(a[key],b[key])){ 
+                 return false;
+             }
+            if (a[key] != b[key]) return false;
         }
         return true;
     } else {
