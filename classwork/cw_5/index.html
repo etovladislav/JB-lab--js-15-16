@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../libs/doT/doT.js"></script>
+    <script src="../../libs/jQuery/jquery-1.11.3.js"></script>
+    <script src="script.js"></script>
+
+    <style type="text/css">
+        #message {
+            width: 500px;
+            height: 300px;
+            margin: 0 auto;
+            border: 1px solid #000000;
+            background-color: rgb(238, 255, 246);
+            overflow:scroll;
+        }
+
+        #input {
+            width: 500px;
+            height: 200px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        #input input {
+            width: 100%;
+        }
+
+        #input button {
+            float: right;
+            margin-top: 10px;
+            width: 100px;
+        }
+        .one{
+            background-color: #edefff;
+            color:black;
+        }
+        .one:nth-child(2n-1){
+            background-color: #f9fff3;
+            color:black;
+        }
+    </style>
+    <!--<script src="script.js"></script>-->
+</head>
+<body>
+<div id="message">
+    <script type="text/htmlh" id="temp1">
+        <div class="main" style="{{=it.color}}" >
+            <div class="text">
+                {{=it.text}}
+            </div>
+            <div class="date">
+                {{=it.date}}
+            </div>
+        </div>
+    </script>
+</div>
+<div id="input">
+    <input type="text" id="input1" placeholder="your message"/>
+    <input type="color" id="color"/>
+    <button id="button">Send</button>
+    
+</div>
+</body>
+
+</html>
