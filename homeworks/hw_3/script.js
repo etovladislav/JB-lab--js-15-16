@@ -58,6 +58,7 @@ Object.create = function (proto) {
                 addFunc(proto[key], a[key])
             }
         }
+
     }
     var a = {};
     addFunc(arguments[0], a);
